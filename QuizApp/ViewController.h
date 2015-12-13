@@ -9,7 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-
-
+-(IBAction)mbutton:(id)sender;
+-(IBAction)bbutton:(id)sender;
+-(IBAction)nextbutton:(id)sender;
+@property(nonatomic,weak)IBOutlet UILabel *questionNo;
+@property(nonatomic,weak)IBOutlet UILabel *kekka;
+@property(nonatomic,weak)IBOutlet UIImageView *backgroundImageView;
 @end
 

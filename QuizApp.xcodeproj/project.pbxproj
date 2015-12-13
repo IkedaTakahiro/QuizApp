@@ -14,6 +14,9 @@
 		06754F201C18DD69001A81E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06754F1F1C18DD69001A81E3 /* Images.xcassets */; };
 		06754F231C18DD69001A81E3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06754F211C18DD69001A81E3 /* LaunchScreen.xib */; };
 		06754F2F1C18DD69001A81E3 /* QuizAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06754F2E1C18DD69001A81E3 /* QuizAppTests.m */; };
+		06FBAEF61C1C6A8D006BC15A /* huseikai.png in Resources */ = {isa = PBXBuildFile; fileRef = 06FBAEF41C1C6A8D006BC15A /* huseikai.png */; };
+		06FBAEF71C1C6A8D006BC15A /* seikai.png in Resources */ = {isa = PBXBuildFile; fileRef = 06FBAEF51C1C6A8D006BC15A /* seikai.png */; };
+		06FBAEF91C1C72EB006BC15A /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 06FBAEF81C1C72EB006BC15A /* default.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		06754F281C18DD69001A81E3 /* QuizAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06754F2D1C18DD69001A81E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06754F2E1C18DD69001A81E3 /* QuizAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuizAppTests.m; sourceTree = "<group>"; };
+		06FBAEF41C1C6A8D006BC15A /* huseikai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = huseikai.png; sourceTree = "<group>"; };
+		06FBAEF51C1C6A8D006BC15A /* seikai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seikai.png; sourceTree = "<group>"; };
+		06FBAEF81C1C72EB006BC15A /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,9 @@
 		06754F121C18DD69001A81E3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				06FBAEF81C1C72EB006BC15A /* default.png */,
+				06FBAEF41C1C6A8D006BC15A /* huseikai.png */,
+				06FBAEF51C1C6A8D006BC15A /* seikai.png */,
 				06754F131C18DD69001A81E3 /* Info.plist */,
 				06754F141C18DD69001A81E3 /* main.m */,
 			);
@@ -201,7 +210,10 @@
 			files = (
 				06754F1E1C18DD69001A81E3 /* Main.storyboard in Resources */,
 				06754F231C18DD69001A81E3 /* LaunchScreen.xib in Resources */,
+				06FBAEF71C1C6A8D006BC15A /* seikai.png in Resources */,
 				06754F201C18DD69001A81E3 /* Images.xcassets in Resources */,
+				06FBAEF61C1C6A8D006BC15A /* huseikai.png in Resources */,
+				06FBAEF91C1C72EB006BC15A /* default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +428,7 @@
 				06754F341C18DD69001A81E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		06754F351C18DD69001A81E3 /* Build configuration list for PBXNativeTarget "QuizAppTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +437,7 @@
 				06754F371C18DD69001A81E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
