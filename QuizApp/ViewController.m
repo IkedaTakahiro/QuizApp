@@ -143,7 +143,8 @@
     
    if(count == 6) {
         self.questionNo.text= @"成績発表！！";
-        NSString *kekkahappyou = [NSString stringWithFormat:@"第5問中%ld問正解",(long)tensuu];
+        NSInteger seikairitu = tensuu*100/5;
+        NSString *kekkahappyou = [NSString stringWithFormat:@"正解率 %ldパーセントです。",(long)seikairitu];
         mondai.text = kekkahappyou;
         self.backgroundImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"default.png"]];
     } else if(count <=5 ){
