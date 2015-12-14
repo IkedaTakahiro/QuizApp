@@ -12,8 +12,8 @@
     NSInteger count;//問題数管理
     NSInteger tensuu;//点数管理
     NSInteger bousi;//ボタン動作管理
-    UITextView *mondai;
-    UITextView *kaisetu2;
+    //UITextView *mondai;
+    //UITextView *kaisetu2;
 }
 
 @end
@@ -37,18 +37,19 @@
     //self.mondai.text = @"test";
     //self.mondai.editable = NO;
     
-    mondai = [[UITextView alloc] initWithFrame:CGRectMake(30,90,250,150)];
-    mondai.text = @"ルフィに麦わら帽子をくれたのは、四皇のひとり「シャンクス」である。";
-    mondai.font = [UIFont systemFontOfSize:12.0];
-    mondai.backgroundColor = [UIColor whiteColor];
-    mondai.editable = NO;
-    [self.view addSubview:mondai];
+    //mondai = [[UITextView alloc] initWithFrame:CGRectMake(30,90,250,150)];
+    self.mondai2.text = @"ルフィに麦わら帽子をくれたのは、四皇のひとり「シャンクス」である。";
+    self.mondai2.font = [UIFont systemFontOfSize:12.0];
+    //mondai.backgroundColor = [UIColor whiteColor];
+    self.mondai2.editable = NO;
+    //[self.view addSubview:mondai];
     
-    kaisetu2 = [[UITextView alloc] initWithFrame:CGRectMake(193,385,100,45)];
-    kaisetu2.font = [UIFont systemFontOfSize:12.0];
-    kaisetu2.backgroundColor = [UIColor clearColor];
-    kaisetu2.editable = NO;
-    [self.view addSubview:kaisetu2];
+    //kaisetu2 = [[UITextView alloc] initWithFrame:CGRectMake(193,385,100,45)];
+    self.kaisetu3.text = nil;
+    self.kaisetu3.font = [UIFont systemFontOfSize:12.0];
+    //kaisetu2.backgroundColor = [UIColor clearColor];
+    self.kaisetu3.editable = NO;
+    //[self.view addSubview:kaisetu2];
 }
 
 //まるボタンの処理
@@ -138,14 +139,14 @@
     
     if(count == 7){
         self.questionNo.text = nil;
-        mondai.text = @"おつかされまです。終了です。もう一度はじめからできます。";
+        self.mondai2.text = @"おつかされまです。終了です。もう一度はじめからできます。";
     }
     
    if(count == 6) {
         self.questionNo.text= @"成績発表！！";
         NSInteger seikairitu = tensuu*100/5;
-        NSString *kekkahappyou = [NSString stringWithFormat:@"正解率 %ldパーセントです。",(long)seikairitu];
-        mondai.text = kekkahappyou;
+        NSString *kekkahappyou = [NSString stringWithFormat:@"正解率 %ld%%です。",(long)seikairitu];
+        self.mondai2.text = kekkahappyou;
         self.backgroundImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"default.png"]];
     } else if(count <=5 ){
     bousi =0;
@@ -154,7 +155,7 @@
     self.backgroundImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"default.png"]];
     }
     self.kekka.text = nil;
-    kaisetu2.text =nil;
+    self.kaisetu3.text =nil;
     [self nakami];
     
 }
@@ -163,7 +164,7 @@
 -(void)seikai{
      self.backgroundImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"seikai.png"]];
      self.kekka.text =@"正解!";
-    kaisetu2.text = @"次の問題へ!";
+    self.kaisetu3.text = @"次の問題へ!";
 }
 
 //不正解の場合の表示
@@ -172,19 +173,19 @@
      self.kekka.text = @"残念!";
      switch(count){
           case 1:
-             kaisetu2.text = @"次こそ正解!";
+             self.kaisetu3.text = @"次こそ正解!";
             break;
          case 2:
-             kaisetu2.text = @"3000万ベリーです。";
+             self.kaisetu3.text = @"3000万ベリーです。";
              break;
          case 3:
-             kaisetu2.text = @"次こそ正解!";
+             self.kaisetu3.text = @"次こそ正解!";
              break;
          case 4:
-             kaisetu2.text = @"次こそ正解!";
+             self.kaisetu3.text = @"次こそ正解!";
              break;
          case 5:
-             kaisetu2.text = @"5月５日です。";
+             self.kaisetu3.text = @"5月５日です。";
              break;
         default:
              break;
@@ -195,16 +196,16 @@
 -(void)nakami{
     switch(count){
         case 2:
-            mondai.text = @"ルフィの最初の懸賞金は、２０００万ベリーである。";
+            self.mondai2.text = @"ルフィの最初の懸賞金は、２０００万ベリーである。";
             break;
         case 3:
-            mondai.text = @"ルフィの食べた悪魔の実は、ゴムゴムの実である。";
+            self.mondai2.text = @"ルフィの食べた悪魔の実は、ゴムゴムの実である。";
             break;
         case 4:
-            mondai.text = @"ルフィの父親は、ドラゴンである。";
+            self.mondai2.text = @"ルフィの父親は、ドラゴンである。";
             break;
         case 5:
-            mondai.text = @"ルフィの誕生日は、7月7日である。";
+            self.mondai2.text = @"ルフィの誕生日は、7月7日である。";
             break;
         default:
             break;
