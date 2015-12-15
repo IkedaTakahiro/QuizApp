@@ -15,6 +15,7 @@
 @property(nonatomic,weak)IBOutlet UILabel *questionNo;
 @property(nonatomic,weak)IBOutlet UILabel *kekka;
 @property(nonatomic,weak)IBOutlet UIImageView *backgroundImageView;
+//storyboardにUITextView追加
 @property(nonatomic,weak)IBOutlet UITextView *mondai2;
 @property(nonatomic,weak)IBOutlet UITextView *kaisetu3;
 @end
